@@ -34,13 +34,15 @@ public class Main {
 
     public static int[] fillArray() {
         Scanner scannerInt = new Scanner(System.in);
-        String choose = "";
+        Scanner scannerStr = new Scanner(System.in);
         int[] arrayOut;
-        while (choose != "End") {
-            arrayOut[i] = scannerInt.nextInt();
-
+        String breakCycle = "";
+        while (breakCycle != "End") {
+            arrayOut[] = scannerInt.nextInt();
+            breakCycle = scannerStr.nextLine();
         }
         scannerInt.close();
+        scannerStr.close();
         return arrayOut;
     }
 
@@ -79,7 +81,7 @@ public class Main {
     public static void subtract(int num1, int num2) {
         System.out.print(num1 - num2);
     }
-
+//
     public static void multiply(int num1, int num2) {
         System.out.print(num1 * num2);
     }
