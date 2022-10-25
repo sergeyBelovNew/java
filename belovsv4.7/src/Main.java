@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -9,14 +10,14 @@ public class Main {
 
     public static void main(String[] args) {
         //7.1 Калькулятор
+        SimpleGUI.Frame test = new SimpleGUI.Frame();
+        test.createMenu();
         System.out.println("7.1 Калькулятор");
         executeTask1();
         //7.2 Массив изменяемой длинны
         System.out.println("7.2 Массив изменяемой длинны");
         executeTask2();
         scannerStreamInt.close();
-        //Это неверно(повторное закрытие 1 потока in) или при инициализации каждого сканера мы создаем параллельный поток ввода?
-        scannerStreamStr.close();
     }
 
     public static void executeTask1() {
@@ -65,7 +66,7 @@ public class Main {
         }
         Object[] tempObj = Arrays.copyOf(hashMap.values().toArray(), hashMap.size());
         //Ошибка
-        Integer[]tempInteger = Arrays.stream(tempObj).toArray(Integer[]:: new);
+        Integer[]tempInteger =(Integer[]) Arrays.stream(tempObj).toArray(Integer[]:: new);
         return convertIntegerToInt(tempInteger);
     }
 
