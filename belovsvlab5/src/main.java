@@ -1,5 +1,4 @@
 
-
 public class main {
 
     public static void main(String[] args) {
@@ -7,7 +6,5 @@ public class main {
         Printer.executeTask3();
         Printer.executeTask4();
     }
-
-
 
 }

@@ -40,7 +40,6 @@ public class Reader {
         System.out.println("Student" + surname + " " + name + " " + secondName + "return" + numberTakenBooks + " books");
     }
 
-
     private Book book = new Book();
     private String name;
     private String surname;

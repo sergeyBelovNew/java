@@ -93,7 +93,6 @@ public class EntryTask1And2 {
         System.out.println("\n");
     }
 
-
     private int chooseFigure;
     private int numberTriangles;
     private int numberSquare;
