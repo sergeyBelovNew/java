@@ -43,7 +43,7 @@ public class EntryTask1And2 {
         circle.calculateArea();
         circle.showInformationCircle();
     }
-//need fix
+//need fix 11
     private void runSeveralFigure() {
         System.out.println("Input number of right triangles, that you want: ");
         numberTriangles = scannerInt.nextInt();
