@@ -9,23 +9,17 @@ public class EntryTask1And2 {
             switch (chooseFigure) {
                 case 1:
                     executeCaseRightTriangle();
-                    System.out.println("Choose next figure");
-                    chooseFigure = scannerInt.nextInt();
                 case 2:
                     executeCaseSquare();
-                    System.out.println("Choose next figure");
-                    chooseFigure = scannerInt.nextInt();
                 case 3:
                     executeCaseCircle();
-                    System.out.println("Choose next figure");
-                    chooseFigure = scannerInt.nextInt();
                 case 4:
                     runSeveralFigure();
-                    System.out.println("Choose next figure");
-                    chooseFigure = scannerInt.nextInt();
                 default:
                     break;
             }
+            System.out.println("Choose next figure");
+            chooseFigure = scannerInt.nextInt();
         }
     }
 
@@ -59,33 +53,15 @@ public class EntryTask1And2 {
         System.out.println("Input number of circles, that you want: ");
         numberCircle = scannerInt.nextInt();
         numberCircle += numberSquare;
-        fillAreaArray(numberTriangles, numberSquare, numberCircle);
+        fillFiguresArray();
     }
 
-    private void fillAreaArray(int numberTriangles, int numberSquare, int numberCircle) {
-        Area[] figures = new Area[numberCircle];
-        double[] array = new double[numberCircle];
-        for (int i = 0; i < numberTriangles; i++) {
-            RightTriangle rightTriangle = new RightTriangle();
-            rightTriangle.inputLegs();
-            rightTriangle.calculateArea();
-            array[i] = rightTriangle.getArea();
-            figures[i] = rightTriangle;
-        }
-        for (int i = numberTriangles; i < numberSquare; i++) {
-            Square square = new Square();
-            square.inputSide();
-            square.calculateArea();
-            array[i] = square.getArea();
-            figures[i] = square;
-        }
-        for (int i = numberSquare; i < numberCircle; i++) {
-            Circle circle = new Circle();
-            circle.inputRadius();
-            circle.calculateArea();
-            array[i] = circle.getArea();
-            figures[i] = circle;
-        }
+    private void fillFiguresArray() {
+        figures = new Area[numberCircle];
+        array = new double[numberCircle];
+        fillFiguresArrayTriangles();
+        fillFiguresArraySquare();
+        fillFiguresArrayCircle();
         System.out.println("Area:");
         for (int i = 0; i < numberCircle; i++) {
             System.out.print(array[i] + "  ");
@@ -93,11 +69,42 @@ public class EntryTask1And2 {
         System.out.println("\n");
     }
 
+    private void fillFiguresArrayTriangles(){
+        RightTriangle rightTriangle = new RightTriangle();
+        for (int i = 0; i < numberTriangles; i++) {
+            rightTriangle.inputLegs();
+            rightTriangle.calculateArea();
+            array[i] = rightTriangle.getArea();
+            figures[i] = rightTriangle;
+        }
+    }
+
+    private void fillFiguresArraySquare(){
+        Circle circle = new Circle();
+        for (int i = numberSquare; i < numberCircle; i++) {
+            circle.inputRadius();
+            circle.calculateArea();
+            array[i] = circle.getArea();
+            figures[i] = circle;
+        }
+    }
+
+    private void fillFiguresArrayCircle(){
+        for (int i = numberSquare; i < numberCircle; i++) {
+            Circle circle = new Circle();
+            circle.inputRadius();
+            circle.calculateArea();
+            array[i] = circle.getArea();
+            figures[i] = circle;
+        }
+    }
+
     private int chooseFigure;
     private int numberTriangles;
     private int numberSquare;
     private int numberCircle;
-    private Area[] figures = new Area[numberCircle];
+    private Area[] figures;
+    private double[] array;
     private final static Scanner scannerInt = new Scanner(System.in);
 
 }
