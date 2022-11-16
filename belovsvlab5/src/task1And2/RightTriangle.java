@@ -1,7 +1,5 @@
 package task1And2;
 
-import task1And2.Area;
-
 import java.util.Random;
 import java.util.Scanner;
 
