@@ -4,41 +4,44 @@ import java.util.Scanner;
 
 public class EntryTask1And2 {
 
-    public void runFigureMenu(int chooseFigure) {
+    public void runFigureMenu() {
+
         while (chooseFigure != 5) {
+            System.out.println("Choose next figure");
+            chooseFigure = scannerInt.nextInt();
             switch (chooseFigure) {
                 case 1:
                     executeCaseRightTriangle();
+                    break;
                 case 2:
                     executeCaseSquare();
+                    break;
                 case 3:
                     executeCaseCircle();
+                    break;
                 case 4:
                     runSeveralFigure();
+                    break;
                 default:
                     break;
             }
-            System.out.println("Choose next figure");
-            chooseFigure = scannerInt.nextInt();
         }
+        scannerInt.close();
     }
 
     private void executeCaseRightTriangle(){
-        RightTriangle rightTriangle = new RightTriangle();
         rightTriangle.inputLegs();
         rightTriangle.calculateArea();
         rightTriangle.showInformationRightTriangle();
     }
 
     private void executeCaseSquare(){
-        Square square = new Square();
         square.inputSide();
         square.calculateArea();
         square.showInformationSquare();
     }
 
     private void executeCaseCircle(){
-        Circle circle = new Circle();
         circle.inputRadius();
         circle.calculateArea();
         circle.showInformationCircle();
@@ -70,7 +73,6 @@ public class EntryTask1And2 {
     }
 
     private void fillFiguresArrayTriangles(){
-        RightTriangle rightTriangle = new RightTriangle();
         for (int i = 0; i < numberTriangles; i++) {
             rightTriangle.inputLegs();
             rightTriangle.calculateArea();
@@ -80,18 +82,16 @@ public class EntryTask1And2 {
     }
 
     private void fillFiguresArraySquare(){
-        Circle circle = new Circle();
-        for (int i = numberSquare; i < numberCircle; i++) {
-            circle.inputRadius();
-            circle.calculateArea();
-            array[i] = circle.getArea();
-            figures[i] = circle;
+        for (int i = numberTriangles; i < numberSquare; i++) {
+            square.inputSide();
+            square.calculateArea();
+            array[i] = square.getArea();
+            figures[i] = square;
         }
     }
 
     private void fillFiguresArrayCircle(){
         for (int i = numberSquare; i < numberCircle; i++) {
-            Circle circle = new Circle();
             circle.inputRadius();
             circle.calculateArea();
             array[i] = circle.getArea();
@@ -100,6 +100,9 @@ public class EntryTask1And2 {
     }
 
     private int chooseFigure;
+    private RightTriangle rightTriangle = new RightTriangle();
+    private Square square = new Square();
+    private Circle circle = new Circle();
     private int numberTriangles;
     private int numberSquare;
     private int numberCircle;
