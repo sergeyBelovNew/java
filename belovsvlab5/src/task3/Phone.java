@@ -28,13 +28,13 @@ public class Phone {
         }
     }
 
-    public void receiveCall(String name) {
-        System.out.println("Calling{" + name + "}");
+    public void receiveCall(String name, String number) {
+        receiveCall(name);
+        System.out.println("Calling{" + number + "}");
     }
 
-    public void receiveCall(String name, String number) {
+    public void receiveCall(String name) {
         System.out.println("Calling{" + name + "}");
-        System.out.println("Calling{" + number + "}");
     }
 
     public String getNumber() {

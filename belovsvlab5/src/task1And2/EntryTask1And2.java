@@ -8,24 +8,15 @@ public class EntryTask1And2 {
         while (chooseFigure != 5) {
             switch (chooseFigure) {
                 case 1:
-                    RightTriangle rightTriangle = new RightTriangle();
-                    rightTriangle.inputLegs();
-                    rightTriangle.calculateArea();
-                    rightTriangle.showInformationRightTriangle();
+                    executeCaseRightTriangle();
                     System.out.println("Choose next figure");
                     chooseFigure = scannerInt.nextInt();
                 case 2:
-                    Square square = new Square();
-                    square.inputSide();
-                    square.calculateArea();
-                    square.showInformationSquare();
+                    executeCaseSquare();
                     System.out.println("Choose next figure");
                     chooseFigure = scannerInt.nextInt();
                 case 3:
-                    Circle circle = new Circle();
-                    circle.inputRadius();
-                    circle.calculateArea();
-                    circle.showInformationCircle();
+                    executeCaseCircle();
                     System.out.println("Choose next figure");
                     chooseFigure = scannerInt.nextInt();
                 case 4:
@@ -36,6 +27,27 @@ public class EntryTask1And2 {
                     break;
             }
         }
+    }
+
+    private void executeCaseRightTriangle(){
+        RightTriangle rightTriangle = new RightTriangle();
+        rightTriangle.inputLegs();
+        rightTriangle.calculateArea();
+        rightTriangle.showInformationRightTriangle();
+    }
+
+    private void executeCaseSquare(){
+        Square square = new Square();
+        square.inputSide();
+        square.calculateArea();
+        square.showInformationSquare();
+    }
+
+    private void executeCaseCircle(){
+        Circle circle = new Circle();
+        circle.inputRadius();
+        circle.calculateArea();
+        circle.showInformationCircle();
     }
 
     private void runSeveralFigure() {

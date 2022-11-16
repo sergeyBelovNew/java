@@ -8,13 +8,10 @@ import java.util.Scanner;
 public class RightTriangle implements Area {
 
     RightTriangle() {
-
         Random random = new Random();
         leg1 =   random.nextDouble(100);
         leg2 =   random.nextDouble(100);
-
     }
-
 
     @Override
     public void calculateArea() {
