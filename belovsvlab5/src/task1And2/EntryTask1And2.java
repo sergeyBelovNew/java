@@ -2,7 +2,7 @@ package task1And2;
 
 import java.util.Scanner;
 
-public class Printer {
+public class EntryTask1And2 {
 
     public void runFigureMenu(int chooseFigure) {
         while (chooseFigure != 5) {
@@ -74,7 +74,7 @@ public class Printer {
             array[i] = circle.getArea();
             figures[i] = circle;
         }
-        System.out.println("task1And2.Area:");
+        System.out.println("Area:");
         for (int i = 0; i < numberCircle; i++) {
             System.out.print(array[i] + "  ");
         }
@@ -82,7 +82,7 @@ public class Printer {
     }
 
 
-    private int chooseFigure = 0;
+    private int chooseFigure;
     private int numberTriangles;
     private int numberSquare;
     private int numberCircle;
