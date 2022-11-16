@@ -1,4 +1,10 @@
 
+import javax.swing.*;
+import javax.swing.plaf.basic.DefaultMenuLayout;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class RightTriangle {
@@ -64,3 +70,4 @@ public class RightTriangle {
     private double cathet2;
     private double hypotenuse;
 }
+

@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9af94af1-cc2e-419f-a8f5-804883bd56dc" name="Changes" comment="ignition">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../belovsv4.7/out/production/belovsv4.7/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../belovsv4.7/out/production/belovsv4.7/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../belovsv4.7/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../belovsv4.7/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../belovsvlab4/src/RightTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../belovsvlab4/src/RightTriangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
