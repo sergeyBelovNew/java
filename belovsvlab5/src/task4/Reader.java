@@ -1,11 +1,15 @@
 package task4;
 
-import java.util.Scanner;
-
 public class Reader {
 
+    public Reader(){
+        name = "Ivan";
+        surname = "Ivanov";
+        secondName = "Yovanovitch";
+    }
+
     public void takeBook(int numberBookNames, Book[] books) {
-        System.out.println("Student" + surname + " " + name + " " + secondName + "takes:");
+        System.out.println("Student " + surname + " " + name + " " + secondName + "takes:");
         for (int i = 0; i < numberBookNames; i++) {
             book = books[i];
             book.outputBook();
@@ -13,17 +17,17 @@ public class Reader {
     }
 
     public void takeBook(int numberBookNames, String[] books) {
-        System.out.println("Student" + surname + " " + name + " " + secondName + "takes:");
+        System.out.println("Student " + surname + " " + name + " " + secondName + "takes:");
         for (int i = 0; i < numberBookNames; i++)
             System.out.println(books[i]);
     }
 
     public void takeBook(int numberTakenBooks) {
-        System.out.println("Student" + surname + " " + name + " " + secondName + "take" + numberTakenBooks + " books");
+        System.out.println("Student " + surname + " " + name + " " + secondName + "take" + numberTakenBooks + " books");
     }
 
     public void returnBook(int numberBookNames, Book[] books) {
-        System.out.println("Student" + surname + " " + name + " " + secondName + "returns:");
+        System.out.println("Student " + surname + " " + name + " " + secondName + " returns:");
         for (int i = 0; i < numberBookNames; i++) {
             book = books[i];
             book.outputBook();
@@ -48,6 +52,5 @@ public class Reader {
     private String faculty;
     private String dateOfBirth;
     private String phoneNumber;
-    private Scanner scannerString = new Scanner(System.in);
 
 }
