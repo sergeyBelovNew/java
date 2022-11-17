@@ -1,19 +1,10 @@
 package task1And2;
 
-import executeForAnonimus.ExecuteTask;
-
 import java.util.Scanner;
 
-public class EntryTask1And2 implements ExecuteTask {
+public class EntryTask1And2  {
 
     public void runEntry(){
-        entryTask1And2.executeTask();
-    }
-
-    EntryTask1And2 entryTask1And2 = new EntryTask1And2() {
-
-        @Override
-        public void executeTask() {
             while (chooseFigure != 5) {
                 System.out.println("Choose next figure");
                 chooseFigure = scannerInt.nextInt();
@@ -28,8 +19,6 @@ public class EntryTask1And2 implements ExecuteTask {
             }
             scannerInt.close();
         }
-
-    };
 
     private void executeCaseRightTriangle() {
         rightTriangle.inputLegs();
