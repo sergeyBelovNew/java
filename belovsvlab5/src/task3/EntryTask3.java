@@ -1,14 +1,17 @@
 package task3;
 
-public class EntryTask3 {
+import executeForAnonimus.ExecuteTask;
+
+public class EntryTask3 implements ExecuteTask {
 
     public void executeTask3() {
-        RunTask.executeTask3();
+        entryTask3.executeTask();
     }
 
-    EntryTask3 RunTask = new EntryTask3() {
+    EntryTask3 entryTask3 = new EntryTask3() {
 
-        public static void executeTask() {
+        @Override
+        public  void executeTask() {
             Phone phone1 = new Phone();
             Phone phone2 = new Phone("70000000", "Classic1", 200);
             Phone phone3 = new Phone("7456567", "Classic2");
@@ -20,6 +23,7 @@ public class EntryTask3 {
             for (int i = 0; i < 5; i++)
                 phones[i] = phone1;
             phone1.sendMessage(phones);
+            this.getClass();
         }
     };
 

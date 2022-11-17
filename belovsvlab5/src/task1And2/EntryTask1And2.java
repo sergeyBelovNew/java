@@ -1,52 +1,55 @@
 package task1And2;
 
+import executeForAnonimus.ExecuteTask;
+
 import java.util.Scanner;
 
-public class EntryTask1And2 {
+public class EntryTask1And2 implements ExecuteTask {
 
-    public void runFigureMenu() {
-
-        while (chooseFigure != 5) {
-            System.out.println("Choose next figure");
-            chooseFigure = scannerInt.nextInt();
-            switch (chooseFigure) {
-                case 1:
-                    executeCaseRightTriangle();
-                    break;
-                case 2:
-                    executeCaseSquare();
-                    break;
-                case 3:
-                    executeCaseCircle();
-                    break;
-                case 4:
-                    runSeveralFigure();
-                    break;
-                default:
-                    break;
-            }
-        }
-        scannerInt.close();
+    public void runEntry(){
+        entryTask1And2.executeTask();
     }
 
-    private void executeCaseRightTriangle(){
+    EntryTask1And2 entryTask1And2 = new EntryTask1And2() {
+
+        @Override
+        public void executeTask() {
+            while (chooseFigure != 5) {
+                System.out.println("Choose next figure");
+                chooseFigure = scannerInt.nextInt();
+                switch (chooseFigure) {
+                    case 1 -> executeCaseRightTriangle();
+                    case 2 -> executeCaseSquare();
+                    case 3 -> executeCaseCircle();
+                    case 4 -> runSeveralFigure();
+                    default -> {
+                    }
+                }
+            }
+            scannerInt.close();
+        }
+
+    };
+
+    private void executeCaseRightTriangle() {
         rightTriangle.inputLegs();
         rightTriangle.calculateArea();
         rightTriangle.showInformationRightTriangle();
     }
 
-    private void executeCaseSquare(){
+    private void executeCaseSquare() {
         square.inputSide();
         square.calculateArea();
         square.showInformationSquare();
     }
 
-    private void executeCaseCircle(){
+    private void executeCaseCircle() {
         circle.inputRadius();
         circle.calculateArea();
         circle.showInformationCircle();
     }
-//need fix 11
+
+    //need fix 11
     private void runSeveralFigure() {
         System.out.println("Input number of right triangles, that you want: ");
         numberTriangles = scannerInt.nextInt();
@@ -72,7 +75,7 @@ public class EntryTask1And2 {
         System.out.println("\n");
     }
 
-    private void fillFiguresArrayTriangles(){
+    private void fillFiguresArrayTriangles() {
         for (int i = 0; i < numberTriangles; i++) {
             rightTriangle.inputLegs();
             rightTriangle.calculateArea();
@@ -81,7 +84,7 @@ public class EntryTask1And2 {
         }
     }
 
-    private void fillFiguresArraySquare(){
+    private void fillFiguresArraySquare() {
         for (int i = numberTriangles; i < numberSquare; i++) {
             square.inputSide();
             square.calculateArea();
@@ -90,7 +93,7 @@ public class EntryTask1And2 {
         }
     }
 
-    private void fillFiguresArrayCircle(){
+    private void fillFiguresArrayCircle() {
         for (int i = numberSquare; i < numberCircle; i++) {
             circle.inputRadius();
             circle.calculateArea();
