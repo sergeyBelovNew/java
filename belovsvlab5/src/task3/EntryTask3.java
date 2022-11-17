@@ -1,8 +1,6 @@
 package task3;
 
-import executeForAnonimus.ExecuteTask;
-
-public class EntryTask3 implements ExecuteTask {
+public class EntryTask3 {
 
     public void executeTask3() {
         Phone phone1 = new Phone();

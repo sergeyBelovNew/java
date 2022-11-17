@@ -1,7 +1,5 @@
 package task4;
 
-import java.util.Random;
-
 public class Book {
 
     public Book(){
@@ -15,6 +13,5 @@ public class Book {
 
     private String author;
     private String title;
-    private Random random = new Random();
 
 }

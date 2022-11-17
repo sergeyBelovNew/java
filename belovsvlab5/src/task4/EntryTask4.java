@@ -1,8 +1,6 @@
 package task4;
 
-import executeForAnonimus.ExecuteTask;
-
-public class EntryTask4 implements ExecuteTask {
+public class EntryTask4 {
 
     public void executeTask4() {
             Reader reader = new Reader();
