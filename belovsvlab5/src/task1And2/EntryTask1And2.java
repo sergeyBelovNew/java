@@ -68,7 +68,7 @@ public class EntryTask1And2  {
         for (int i = 0; i < numberTriangles; i++) {
             rightTriangle.inputLegs();
             rightTriangle.calculateArea();
-            array[i] = rightTriangle.getArea();
+            array[i] = rightTriangle.calculateArea();
             figures[i] = rightTriangle;
         }
     }
@@ -77,7 +77,7 @@ public class EntryTask1And2  {
         for (int i = numberTriangles; i < numberSquare; i++) {
             square.inputSide();
             square.calculateArea();
-            array[i] = square.getArea();
+            array[i] = square.calculateArea();
             figures[i] = square;
         }
     }
@@ -86,7 +86,7 @@ public class EntryTask1And2  {
         for (int i = numberSquare; i < numberCircle; i++) {
             circle.inputRadius();
             circle.calculateArea();
-            array[i] = circle.getArea();
+            array[i] = circle.calculateArea();
             figures[i] = circle;
         }
     }

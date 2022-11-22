@@ -11,8 +11,8 @@ public class Square implements Area {
     }
 
     @Override
-    public void calculateArea() {
-        area = side * side;
+    public double calculateArea() {
+        return  side * side;
     }
 
     public void inputSide() {
@@ -22,14 +22,10 @@ public class Square implements Area {
     }
 
     public void showInformationSquare() {
-        System.out.println("Side: " + side + "\ntask1And2.Area: " + area);
-    }
-
-    public double getArea() {
-        return area;
+        System.out.println("Side: " + side + "\ntask1And2.Area: " );
+        System.out.println(calculateArea() + "\n");
     }
 
     private double side;
-    private double area;
 
 }

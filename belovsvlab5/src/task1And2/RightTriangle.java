@@ -12,8 +12,8 @@ public class RightTriangle implements Area {
     }
 
     @Override
-    public void calculateArea() {
-        area = leg1 * leg2 * 0.5;
+    public double calculateArea() {
+        return leg1 * leg2 * 0.5;
     }
 
     public void inputLegs() {
@@ -26,17 +26,13 @@ public class RightTriangle implements Area {
     }
 
     public void showInformationRightTriangle() {
-        System.out.println("Leg1: " + leg1 + "\nLeg2: " + leg2 + "\nHypotenuse: " + hypotenuse + "\nArea: " + area);
-    }
-
-    public double getArea() {
-        return area;
+        System.out.println("Leg1: " + leg1 + "\nLeg2: " + leg2 + "\nHypotenuse: " + hypotenuse + "\nArea: ");
+        System.out.print(calculateArea() + "\n");
     }
 
     private double leg1;
     private double leg2;
     private double hypotenuse;
-    private double area;
 
 }
 

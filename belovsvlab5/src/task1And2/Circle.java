@@ -11,12 +11,13 @@ public class Circle implements Area {
     }
 
     @Override
-    public void calculateArea() {
-        area =  Math.pow(radius, 2) * Math.PI;
+    public double calculateArea() {
+        return Math.pow(radius, 2) * Math.PI;
     }
 
     public void showInformationCircle() {
-        System.out.println("Radius: " + radius + "\ntask1And2.Area: " + area);
+        System.out.println("Radius: " + radius + "\ntask1And2.Area: ");
+        System.out.print(calculateArea() + "\n");
     }
 
     public void inputRadius() {
@@ -25,11 +26,6 @@ public class Circle implements Area {
         radius = scanner.nextDouble();
     }
 
-    public double getArea() {
-        return area;
-    }
-
     private double radius;
-    private double area;
 
 }
