@@ -6,15 +6,18 @@ public class ListTasks {
 
     public static void runTask() {
 
+        int counter = 0;
         List<Answer> answers = inputAnswers();
         Answer answer = new Answer();
         for (int i = 0; i < answers.size(); i++) {
             answer = answers.get(i);
-            if (answer.checkCorrect())
-                System.out.println("Задание: " + i  + "  верный ответ");
-            else
-                System.out.println("Задание: " + i  + "  ошибка");
+            if (answer.checkCorrect()) {
+                System.out.println("Задание: " + i + "  верный ответ");
+                counter++;
+            } else
+                System.out.println("Задание: " + i + "  ошибка");
         }
+        System.out.println("Верных ответов: " + counter + " из " + answers.size());
     }
 
     private static List<Answer> inputAnswers() {

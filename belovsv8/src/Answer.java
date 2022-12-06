@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class Answer {
 
@@ -15,6 +13,14 @@ public class Answer {
         if (question.getRightAnswer() == yourAnswer)
             return true;
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "Answer{" +
+                "yourAnswer=" + yourAnswer +
+                ", question=" + question +
+                '}';
     }
 
     private int yourAnswer;
